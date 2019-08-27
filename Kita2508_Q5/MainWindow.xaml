@@ -1,0 +1,40 @@
+﻿<Window x:Class="Kita2508_Q5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kita2508_Q5"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Title="MainWindow" Height="650" Width="1000" FontSize="16"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <StackPanel>
+        
+        <Grid>
+            <local:InvitationUserControl Margin="30"
+                            x:Name="UserControlReadOnly"                                
+                            Visibility="Visible"   />
+            <local:InvititionUserControlForEdit Margin="30"
+                            x:Name="UserControlEditable"                                
+                            Visibility="Hidden"   />
+            <local:InvitationUserControlCustomized Margin="30"
+                            x:Name="UserControlCustom"                                
+                            Visibility="Hidden"   />
+        </Grid>
+        
+        <StackPanel Orientation="Horizontal" >
+            <Button Content="Read Only" Height="50" Margin="100 20 50 0" 
+                    FontSize="26" Click="Button_Click"/>
+            <Button Content="Auto" Height="50" Margin="100 20 50 0" 
+                    FontSize="26" Click="Button_Click_1"/>
+            <Button Content="Customize" Height="50" Margin="100 20 50 0" 
+                    FontSize="26" Click="Button_Click_2"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
